@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# סביבות IDE
+.vscode/
+.idea/
+
+# קבצי לוג
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / Production
+dist/
+build/
+
+# סביבות מקומיות / סודות
+.env
+.DS_Store
+
+package-lock.json
+
+package.json
