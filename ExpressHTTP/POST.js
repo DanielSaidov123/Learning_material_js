@@ -2,21 +2,14 @@ import express from "express";
 
 const app = express();
 
-
-//req.params
-app.get('/users/:id', (req, res) => {
-  const id = req.params.id;
-  res.send(id);
+//req.body
+app.post('/users', (req, res) => {
+  const name = req.body.name;
+  const age = req.body.age;
+  res.send({ name, age });
 });
-//GET /users/5  = קריאה
+//{ "name": "Daniel","age": 20}  = קריאה  
 
-
-//req.query
-app.get('/users', (req, res) => {
-  const age = req.query.age;
-  res.send(age);
-});
-//GET /users?age=20 = קריאה
 
 
 

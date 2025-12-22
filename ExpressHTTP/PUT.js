@@ -3,20 +3,16 @@ import express from "express";
 const app = express();
 
 
-//req.params
-app.get('/users/:id', (req, res) => {
+//req.params + req.body
+app.put('/users/:id', (req, res) => {
   const id = req.params.id;
-  res.send(id);
+  const name = req.body.name;
+  res.send({ id, name });
 });
-//GET /users/5  = קריאה
+//PUT /users/3 =  קריאה   
+//{"name": "New Name"}  = קריאה  
+//זה גם זה וגם זה שולחים
 
-
-//req.query
-app.get('/users', (req, res) => {
-  const age = req.query.age;
-  res.send(age);
-});
-//GET /users?age=20 = קריאה
 
 
 

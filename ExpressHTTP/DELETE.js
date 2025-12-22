@@ -2,21 +2,12 @@ import express from "express";
 
 const app = express();
 
-
-//req.params
-app.get('/users/:id', (req, res) => {
+app.delete('/users/:id', (req, res) => {
   const id = req.params.id;
-  res.send(id);
+  res.send(`deleted ${id}`);
 });
-//GET /users/5  = קריאה
+//DELETE /users/7 = קריאה
 
-
-//req.query
-app.get('/users', (req, res) => {
-  const age = req.query.age;
-  res.send(age);
-});
-//GET /users?age=20 = קריאה
 
 
 
